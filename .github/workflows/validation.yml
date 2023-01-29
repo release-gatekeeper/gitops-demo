@@ -4,7 +4,7 @@ on:
     branches:
       - '*'
 jobs:
-  my-job:
+  static-analysis:
     runs-on: ubuntu-latest
     steps:
       - name: sleep
