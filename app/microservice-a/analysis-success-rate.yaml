@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: success-rate
+spec:
+  metrics:
+  - name: success-rate
+    interval: 10s
+    successCondition: result[0] > 0.95
+    failureLimit: 2
+    provider:
+      prometheus:
+        address: http://prom-kube-prometheus-stack-prometheus.kube-system:9090/
+        query: >+
+          sum(rate(traefik_entrypoint_requests_total{entrypoint="web", code=~"(200)", method="POST"}[10s]))
+          /
+          sum(rate(traefik_entrypoint_requests_total{entrypoint="web", code=~"(200|500)", method="POST"}[10s]))

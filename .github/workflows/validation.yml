@@ -1,0 +1,13 @@
+name: validation
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sleep
+        run: sleep 10
+      - name: my-step
+        run: echo "Hello World!"
