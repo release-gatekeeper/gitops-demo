@@ -8,7 +8,7 @@ metadata:
 spec:
   endpoints:
     - interval: 6s
-      targetPort: 9100
+      targetPort: 9100gh
       path: /metrics
   selector:
     matchLabels:
