@@ -7,3 +7,8 @@ resources:
 - service-a/service.yaml
 - service-a/service.canary.yaml
 - service-a/analysis.success-rate.yaml
+- service-b/ingress.yaml
+- service-b/rollout.yaml
+- service-b/service.yaml
+- service-b/service.canary.yaml
+- service-b/analysis.success-rate.yaml
