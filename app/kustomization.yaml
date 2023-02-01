@@ -2,9 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- microservice-a/canary-rollout.yaml
-- microservice-a/canary-service.yaml
-- microservice-a/canary-ingress.yaml
-- microservice-a/canary-preview-service.yaml
-- microservice-a/canary-preview-ingress.yaml
-- microservice-a/analysis-success-rate.yaml
+- service-a/ingress.yaml
+- service-a/rollout.yaml
+- service-a/service.yaml
+- service-a/service.canary.yaml
+- service-a/analysis.success-rate
