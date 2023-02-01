@@ -27,6 +27,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-notifications/release-1.0/manifests/install.yaml
 ```
 
+9. add the following changes to traefik deployment
+```bash
+--metrics.prometheus.addServicesLabels=true
+--metrics.prometheus.addrouterslabels=true
+```
+
 
 links:
 1. argocd - https://localhost:8080/
