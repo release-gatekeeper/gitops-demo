@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: service-b-success-rate
+spec:
+  metrics:
+  - name: success-rate
+    interval: 10s
+    successCondition: result[0] > 0.95
+    failureLimit: 2
+    provider:
+      prometheus:
+        address: http://prom-kube-prometheus-stack-prometheus.kube-system:9090/
+        query: >+
+          sum(rate(traefik_service_requests_total{exported_service="app-service-b-80@kubernetes", code=~"(200)", method="POST"}[10s]))
+          /
+          sum(rate(traefik_service_requests_total{exported_service="app-service-b-80@kubernetes", code=~"(200|500)", method="POST"}[10s]))
