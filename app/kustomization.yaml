@@ -6,4 +6,4 @@ resources:
 - service-a/rollout.yaml
 - service-a/service.yaml
 - service-a/service.canary.yaml
-- service-a/analysis.success-rate
+- service-a/analysis.success-rate.yaml
