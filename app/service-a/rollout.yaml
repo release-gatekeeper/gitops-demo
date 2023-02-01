@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: service-a
-        image: argoproj/rollouts-demo:green
+        image: argoproj/rollouts-demo:purple
         imagePullPolicy: Always
         ports:
         - name: http
@@ -31,9 +31,9 @@ spec:
         templates:
         - templateName: service-a-success-rate
       canaryService: service-a-canary
-#       steps:
-#       - setWeight: 20
-#       - pause: {duration: 10}
-# #      - pause: {}
-#       - setWeight: 80
-#       - pause: {duration: 10}
+      steps:
+      - setWeight: 20
+      - pause: {duration: 10}
+#      - pause: {}
+      - setWeight: 80
+      - pause: {duration: 10}
