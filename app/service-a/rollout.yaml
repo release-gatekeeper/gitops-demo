@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: service-a
-          image: argoproj/rollouts-demo:purple
+          image: itaigendler/service-a:1.0.0
           imagePullPolicy: Always
           ports:
             - name: http
