@@ -31,13 +31,4 @@ spec:
         templates:
           - templateName: service-a-success-rate
       canaryService: service-a-canary
-      steps:
-        - setWeight: 20
-        - pause:
-            duration: 10
-        - setWeight: 40
-        - pause:
-            duration: 10
-        - setWeight: 80
-        - pause:
-            duration: 10
+      steps: []
