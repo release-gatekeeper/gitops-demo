@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: service-a
   annotations:
-    ingress.kubernetes.io/proxy-body-size: 100M
+    ingress.kubernetes.io/proxy-body-size: 110M
     ingress.kubernetes.io/app-root: /
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
