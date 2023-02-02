@@ -4,7 +4,7 @@ metadata:
   labels:
     release: prom
   name: traefik
-  namespace: kube-systemasd
+  namespace: kube-systemasdasd
 spec:
   endpoints:
     - interval: 6s
