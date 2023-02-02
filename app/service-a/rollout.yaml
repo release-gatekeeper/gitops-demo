@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: service-a
-          image: itaigendler/service-a:1.2.0
+          image: itaigendler/service-a:1.1.0
           imagePullPolicy: Always
           ports:
             - name: http
