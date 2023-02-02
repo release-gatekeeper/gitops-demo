@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: service-a
-          image: itaigendler/service-a:1.3.0
+          image: itaigendler/service-a:1.1.0
           imagePullPolicy: Always
           ports:
             - name: http
@@ -31,10 +31,4 @@ spec:
         templates:
           - templateName: service-a-success-rate
       canaryService: service-a-canary
-      steps:
-        - setWeight: 20
-        - pause:
-            duration: 10
-        - setWeight: 80
-        - pause:
-            duration: 10
+      steps: []
