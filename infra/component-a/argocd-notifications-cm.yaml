@@ -12,5 +12,5 @@ data:
         path: /event/argocd
         body: |
           {
-            "test": "itai-3"
+            "test": "itai-34"
           }
