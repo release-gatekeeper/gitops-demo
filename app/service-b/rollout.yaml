@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: service-b
-          image: itaigendler/service-b:1.0.0
+          image: itaigendler/service-b:1.1.0
           imagePullPolicy: Always
           ports:
             - name: http
@@ -33,6 +33,9 @@ spec:
       canaryService: service-b-canary
       steps:
         - setWeight: 20
+        - pause:
+            duration: 10
+        - setWeight: 40
         - pause:
             duration: 10
         - setWeight: 80
