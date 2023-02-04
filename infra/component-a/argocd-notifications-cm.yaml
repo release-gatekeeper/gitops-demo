@@ -8,7 +8,7 @@ data:
   template.form-data: |
     webhook:
       form:
-        method: POST
+        method: GET
         path: /event/argocd
         body: |
           {
